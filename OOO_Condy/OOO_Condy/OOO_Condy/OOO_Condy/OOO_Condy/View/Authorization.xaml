@@ -1,0 +1,45 @@
+﻿<Window x:Class="OOO_Condy.View.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOO_Condy.View"
+        mc:Ignorable="d"
+        Title="Authorization" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--Заголовок-->
+        <Grid Grid.Row="0" Background="#FFB9FDDE">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="/Resources/Логотип.png"/>
+            <TextBlock Text="Авторизация" Grid.Column="1" HorizontalAlignment="Center"/>
+            <Button x:Name="btn_exit" Content="Выход" Grid.Column="2" Click="btn_exit_Click"/>
+        </Grid>
+        <Grid Grid.Row="1" x:Name="gridMain">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.3*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Логин:"  Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15" />
+            <TextBlock Text="Пароль:"  Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15"/>
+            <TextBox x:Name="tb_login" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0" Width="300"/>
+            <PasswordBox Name="pb_password" Grid.Row="2" Grid.Column="1" Margin="20,0,0,0" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Button x:Name="btn_signIn" Grid.Row="4" Content="Войти" Click="btn_signIn_Click" Grid.ColumnSpan="2" Margin="200, 20"/>
+        </Grid>
+    </Grid>
+</Window>

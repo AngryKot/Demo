@@ -1,0 +1,175 @@
+Список всех заявок
+КОД ОКНА XAML
+<Window x:Class="OOO_Condy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOO_Condy"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Заголовок-->
+        <Grid Grid.Row="0" Background="#FFB9FDDE">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" Source="/Resources/Логотип.png"/>
+            <TextBlock Text="Список заявок на посещение" Grid.Column="1" HorizontalAlignment="Center"/>
+            <Button x:Name="btn_exit" Content="Выход из аккаунта" Grid.Column="2" Click="btn_exit_Click"/>
+
+        </Grid>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Таблица-->
+            <DataGrid Grid.Row="1" x:Name="dgRequest" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Номер заявки" Width="*" Binding="{Binding RequestId}"/>
+                    <DataGridTextColumn Header="Дата подачи заявки" Width="2*" Binding="{Binding RequestCreateAt, StringFormat=dd:MM:yyyy HH:mm}"/>
+                    <DataGridTextColumn Header="Оборудование" Width="2*" Binding="{Binding EquipmentType.EquipmentTypeTitle}"/>
+                    <DataGridTextColumn Header="Модель оборудования" Width="2*" Binding="{Binding RequestDeviceModel}"/>
+                    <DataGridTextColumn Header="Описание проблемы" Width="2*"  Binding="{Binding RequestDescription}"/>
+                    <DataGridTextColumn Header="Заказчик" Width="2*"  Binding="{Binding User.UserFullname}"/>
+                    <DataGridTextColumn Header="Телефон заказчика" Width="2*"  Binding="{Binding RequestPhone}"/>
+                    <DataGridTextColumn Header="Статус заявки" Width="2*"  Binding="{Binding Status.StatusTitle}"/>
+                    <DataGridTextColumn Header="Специалист" Width="2*"  Binding="{Binding User1.UserFullname}"/>
+                    <DataGridTextColumn Header="Комментарий специалиста" Width="2*"  Binding="{Binding RequestComment}"/>
+                    <DataGridTextColumn Header="Запчасть" Width="2*"  Binding="{Binding Stage.StageTitle}"/>
+                    <DataGridTextColumn Header="Затраченное время" Width="2*" Binding="{Binding RequestDuration}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!--Фильтры и поиск-->
+            <StackPanel Orientation="Vertical" Grid.Column="1">
+                <TextBlock Text="Поиск по номеру заявки"/>
+                <TextBox x:Name="tb_searchById" TextChanged="tb_searchById_TextChanged"/>
+                <TextBlock Text="Фильтрация по статусу"/>
+                <ComboBox x:Name="cb_statusFilter" SelectionChanged="cb_statusFilter_SelectionChanged" />
+            </StackPanel>
+        </Grid>
+
+        <!--Кнопки управления-->
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <Button x:Name="btn_createRequest" Content="Регистрация заявки" Click="btn_createRequest_Click" />
+            <Button x:Name="btn_editRequest" Content="Редактирование заявки" Click="btn_editRequest_Click" />
+            <Button x:Name="btn_report" Content="Отчетность" Click="btn_report_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
+КОД ФУНКЦИИ
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace OOO_Condy
+{
+    /// <summary>
+    /// Логика взаимодействия для MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            var statuses = App.DB.Status.ToList();
+            cb_statusFilter.SelectedValuePath = "StatusId";
+            cb_statusFilter.DisplayMemberPath = "StatusTitle";
+            cb_statusFilter.ItemsSource = statuses;
+            cb_statusFilter.SelectedIndex = 0;
+
+            ShowRequests();
+        }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_editRequest_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgRequest.SelectedItem != null)
+            {
+            var editWindow = new View.CreateRequest((Model.Request)dgRequest.SelectedItem);
+            Hide();
+            editWindow.ShowDialog();
+            Show();
+            } else
+            {
+                MessageBox.Show("Для редактирования выберите заявку!");
+            }
+            
+        }
+
+        private void btn_report_Click(object sender, RoutedEventArgs e)
+        {
+            string statistic = $"Количество выполненых заявок: {App.DB.Request.Count(request => request.RequestStatus == 4)}";
+            var completedRequests = App.DB.Request.Where(request => request.RequestDuration != null).ToList();
+            var averageTime = "";
+            if (completedRequests.Count != 0)
+            {
+                averageTime = completedRequests.Average(request => request.RequestDuration).ToString();
+            }
+            statistic += $"\nСреднее время выполнения заявки: {averageTime} часов";
+            MessageBox.Show(statistic);
+        }
+
+        private void tb_searchById_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ShowRequests();
+        }
+
+        private void btn_createRequest_Click(object sender, RoutedEventArgs e)
+        {
+            var editWindow = new View.CreateRequest(null);
+            Hide();
+            editWindow.ShowDialog();
+            Show();
+        }
+
+        private void ShowRequests()
+        {
+            var requests = App.DB.Request.ToList();
+
+            if (tb_searchById.Text.Length > 0)
+            {
+                requests = requests.FindAll(req => req.RequestId.ToString().Contains(tb_searchById.Text));
+            }
+
+            requests = requests.FindAll(req => req.RequestStatus == (int)cb_statusFilter.SelectedValue);
+
+            dgRequest.ItemsSource = requests;
+        }
+
+        private void cb_statusFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ShowRequests();
+        }
+    }
+}

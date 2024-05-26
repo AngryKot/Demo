@@ -1,0 +1,23 @@
+Запустить приложение TightVNC Viewer
+Данные для удаленного рабочего стола: seat.demo:59XX
+
+Вход в Gitea: 
+Ввести в строке браузера: http://gitea.demo:3000
+Вход под данными: 	логин: userXX		пароль: password
+
+Репозиторий: repoXX
+
+Ссылка на GitTea задание:
+Ссылка на Олесю:
+Ссылка на Пашу: http://gitea.demo:3000/userXX/repoXX
+
+Данные для БД: 
+Имя сервера: mssql.demo		Логин: userXX		Пароль: password
+Создать БД с именем dbXX 
+
+Создать папку examXX на рабочем столе 
+
+winget install -e --id Git.Git
+
+cd (C:\Users\FEDPo\Desktop\new путьДоПапки)
+git clone https://github.com/PavelIsProgrammer/demo.git

@@ -1,0 +1,164 @@
+Создание заявки
+Код окна xaml
+<Window x:Class="OOO_Condy.View.CreateRequest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOO_Condy.View"
+        mc:Ignorable="d"
+        Title="CreateRequest" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Заголовок-->
+        <Grid Grid.Row="0" Background="#FFB9FDDE">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" Source="/Resources/Логотип.png"/>
+            <TextBlock Text="Список заявок на посещение" Grid.Column="1" HorizontalAlignment="Center"/>
+            <Button x:Name="btn_exit" Content="Выход" Grid.Column="2" Click="btn_exit_Click"/>
+
+        </Grid>
+
+
+        <UniformGrid Grid.Row="1" Columns="2" Rows="11">
+            <TextBlock Text="Дата создания"/>
+            <DatePicker x:Name="dpDateAdd" IsEnabled="False"/>
+            <TextBlock Text="Тип оборудования"/>
+            <ComboBox x:Name="cbEquipmentType"/>
+            <TextBlock Text="Модель устройства"/>
+            <TextBox x:Name="tbDeviceModel" />
+            <TextBlock Text="Описание проблемы"/>
+            <TextBox x:Name="tbDescription" />
+            <TextBlock Text="Заказчик"/>
+            <ComboBox x:Name="cbCustomer"/>
+            <TextBlock Text="Номер телефона заказчика"/>
+            <TextBox x:Name="tbCustomerPhone"/>
+            <TextBlock Text="Статус заявки"/>
+            <ComboBox Name="cbStatus" />
+            <TextBlock Text="Этап выполнения"/>
+            <ComboBox Name="cbStage"/>
+            <TextBlock Text="Исполнитель"/>
+            <ComboBox x:Name="cbEmployee"/>
+            <TextBlock Text="Комментарий исполнителя"/>
+            <TextBox x:Name="tbComment" />
+            <TextBlock Text="Время исполнения"/>
+            <TextBox x:Name="tbDuration" />
+        </UniformGrid>
+
+        <!--Кнопки управления-->
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            
+            <Button x:Name="btnSave" Content="Сохранить" Click="btnSave_Click"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
+  public partial class CreateRequest : Window
+  {
+      private bool isEdit = false;
+      private Model.Request request;
+
+      public CreateRequest(Model.Request request)
+      {
+          InitializeComponent();
+
+          isEdit = request != null;
+          this.request = request;
+
+          var statuses = App.DB.Status.ToList();
+          cbStatus.SelectedValuePath = "StatusId";
+          cbStatus.DisplayMemberPath = "StatusTitle";
+          cbStatus.ItemsSource = statuses;
+          cbStatus.SelectedIndex = 0;
+
+          var stages = App.DB.Stage.ToList();
+          cbStage.SelectedValuePath = "StageId";
+          cbStage.DisplayMemberPath = "StageTitle";
+          cbStage.ItemsSource = stages;
+          cbStage.SelectedIndex = 0;
+
+          var equipmentTypes = App.DB.EquipmentType.ToList();
+          cbEquipmentType.SelectedValuePath = "EquipmentTypeId";
+          cbEquipmentType.DisplayMemberPath = "EquipmentTypeTitle";
+          cbEquipmentType.ItemsSource = equipmentTypes;
+          cbEquipmentType.SelectedIndex = 0;
+
+          var users = App.DB.User.ToList();
+          cbCustomer.SelectedValuePath = "UserId";
+          cbCustomer.DisplayMemberPath = "UserFullname";
+          cbEmployee.SelectedValuePath = "UserId";
+          cbEmployee.DisplayMemberPath = "UserFullname";
+          cbCustomer.ItemsSource = users.FindAll(user => user.UserRole == 1);
+          cbCustomer.SelectedIndex = 0;
+          cbEmployee.ItemsSource = users.FindAll(user => user.UserRole == 3);
+          cbEmployee.SelectedIndex = 0;
+
+          if (isEdit)
+          {
+              dpDateAdd.SelectedDate = request.RequestCreateAt;
+              cbEquipmentType.SelectedValue = request.RequestEquipmentType;
+              tbDeviceModel.Text = request.RequestDeviceModel;
+              tbDescription.Text = request.RequestDescription;
+              tbCustomerPhone.Text = request.RequestPhone;
+              cbCustomer.SelectedValue = request.RequestCustomer;
+              cbEmployee.SelectedValue = request.RequestEmployee;
+              cbStatus.SelectedValue = request.RequestStatus;
+              cbStage.SelectedValue = request.RequesStage;
+              tbComment.Text = request.RequestComment;
+              tbDuration.Text = request.RequestDuration.ToString();
+
+              if (App.currentUser.UserRole == 2)
+              {
+                  cbStage.IsEnabled = false;
+                  cbEquipmentType.IsEnabled = false;
+                  cbCustomer.IsEnabled = false;
+                  tbDeviceModel.IsEnabled = false;
+                  tbDescription.IsEnabled = false;
+                  tbCustomerPhone.IsEnabled = false;
+                  tbComment.IsEnabled = false;
+                  tbDuration.IsEnabled = false;
+              }
+              else
+              {
+                  cbStatus.IsEnabled = false;
+                  cbEmployee.IsEnabled = false;
+                  cbEquipmentType.IsEnabled = false;
+                  cbCustomer.IsEnabled = false;
+                  tbDeviceModel.IsEnabled = false;
+                  tbDescription.IsEnabled = false;
+                  tbCustomerPhone.IsEnabled = false;
+              }
+          }
+          else
+          {
+              cbStatus.IsEnabled = false;
+              cbStage.IsEnabled = false;
+              cbEmployee.IsEnabled = false;
+              tbComment.IsEnabled = false;
+              tbDuration.IsEnabled = false;
+          }
+      }
+
+
+      private void tb_searchById_TextChanged(object sender, TextChangedEventArgs e)
+      {
+
+      }
+
+      private void btn_exit_Click(object sender, RoutedEventArgs e)
+      {
+          Close();
+      }
+
+       }

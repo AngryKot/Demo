@@ -1,0 +1,80 @@
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.AssemblyReference.cache
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.SuggestedBindingRedirects.cache
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\View\CreateRequest.g.cs
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\View\MainWindow.g.cs
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\View\Authorization.g.cs
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\App.g.cs
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy_MarkupCompile.cache
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy_MarkupCompile.lref
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy_Content.g.cs
+E:\CSharpProjects\OOO_Condy\OOO_Condy\bin\Debug\OOO_Condy.exe.config
+E:\CSharpProjects\OOO_Condy\OOO_Condy\bin\Debug\OOO_Condy.exe
+E:\CSharpProjects\OOO_Condy\OOO_Condy\bin\Debug\OOO_Condy.pdb
+E:\CSharpProjects\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.dll
+E:\CSharpProjects\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.SqlServer.dll
+E:\CSharpProjects\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.xml
+E:\CSharpProjects\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.SqlServer.xml
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\App.baml
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\View\CreateRequest.baml
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\View\MainWindow.baml
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\View\Authorization.baml
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.g.resources
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.Properties.Resources.resources
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.GenerateResource.cache
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.CoreCompileInputs.cache
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.CopyComplete
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.exe
+E:\CSharpProjects\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.pdb
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\OOO_Condy.exe.config
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\OOO_Condy.exe
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\OOO_Condy.pdb
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.dll
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.xml
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.AssemblyReference.cache
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\CreateRequest.g.cs
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\MainWindow.g.cs
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\Authorization.g.cs
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\App.g.cs
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy_Content.g.cs
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy_MarkupCompile.cache
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy_MarkupCompile.lref
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\App.baml
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\CreateRequest.baml
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\MainWindow.baml
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\Authorization.baml
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.g.resources
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.Properties.Resources.resources
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.GenerateResource.cache
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.CoreCompileInputs.cache
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.Up2Date
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.exe
+C:\Users\FEDPo\Documents\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.pdb
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.AssemblyReference.cache
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.SuggestedBindingRedirects.cache
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\CreateRequest.g.cs
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\MainWindow.g.cs
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\Authorization.g.cs
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\App.g.cs
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy_Content.g.cs
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy_MarkupCompile.cache
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy_MarkupCompile.lref
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.exe
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.pdb
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\OOO_Condy.exe.config
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\OOO_Condy.exe
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\OOO_Condy.pdb
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.dll
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.xml
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\App.baml
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\CreateRequest.baml
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\MainWindow.baml
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\View\Authorization.baml
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.g.resources
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.Properties.Resources.resources
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.GenerateResource.cache
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.CoreCompileInputs.cache
+C:\Users\petrs\OneDrive\Рабочий стол\13-05-2024_19-40-16\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\OOO_Condy\obj\Debug\OOO_Condy.csproj.CopyComplete
